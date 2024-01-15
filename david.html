@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Login Ndeleva BOT</title>
+    </head>
+    <body>
+        <div class="login-container">
+            <form id="loginForm">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" required title="Enter your Full Name" oninput="autoUpperCase(this)">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required placeholder="dndeleva@gmail.com"title="Input dndeleva@gmail.com as the email.">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]).{8,}$" title="Input Ab5/64257/23 as the password. Password must be 8 characters or more, contain atleast one capital letter and one punctuation mark" required placeholder="Ab5/64257/23">
+
+                <label for="showPassword">Show Password</label>
+                <input type="checkbox" onclick="showPassword()">
+
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" required title="Enter your Phone Number starting with the country code.">
+
+                <button type="button" onclick="forgotPassword()">Forgot Password?</button>
+
+                <button type="submit">Login</button>
+
+            </form>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

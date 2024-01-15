@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome to Ndeleva</title>
+    </head>
+    <body>
+        <div class='logo'>
+            <b>&lt;DAVID &gt;</b>
+            <br>
+            N D E L E V A
+        </div>
+      
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+            body {
+                font-family: 'Quicksand',sans-serif;
+                background: linear-gradient(to right, dodgerblue 0%, deepskyblue 100%);
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .logo {
+                text-align: center;
+                font-size: 50px;
+            }
+
+            body b {
+                font-size: 60px;
+            }
+
+        </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                if ('speechSynthesis' in window) {
+                    var greeting = new SpeechSynthesisUtterance('Hello! Welcome to my webpage.');
+
+                    greeting.voice = speechSynthesis.getVoices()[0];
+
+                    speechSynthesis.speak(greeting);
+                } else {
+                    console.error('Web speech is not supported on your device.');
+                }
+            });
+            setTimeout(function() {
+                window.location.href = 'david.html';
+            }, 5000);
+        </script>
+
+    </body>
+
+</html>

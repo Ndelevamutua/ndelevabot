@@ -1,0 +1,13 @@
+{
+    "name": "ndeleva@5.0.0",
+    "description": "",
+    "keywords": ["noedjs"],
+    "success_url": "/",
+    "env": {
+        "ALWAYS_ONLINE": {
+            "description": "show bot number last seen as online",
+            "required": false,
+            "value": "false"
+        },
+    }
+}
