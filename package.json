@@ -5,8 +5,8 @@
     "main": "index.js",
     "scripts": {
       "start": "pm2 start . --attach --namespace ndeleva --name ndeleva",
-      "stop": "pm2 stop levanter",
-      "heroku-postbuild": "git clone https://github.com/ndelevamutua/whatsapp-bot-md.git temp && mv temp/.git .git && rm -rf temp"
+      "stop": "pm2 stop ndeleva",
+      "heroku-postbuild": "git clone https://github.com/ndelevamutua/ndelevabot.git temp && mv temp/.git .git && rm -rf temp"
     },
     "author": "",
     "license": "ISC",
