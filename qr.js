@@ -1,15 +1,15 @@
-const { Client } = require('whatsapp-web.js');
-const client = new Client();
+function generateQRCode() {
+    var phoneNumber = '+254746193590';  
+    var preFilledMessage = encodeURIComponent('Hello, I just scanned your QR code on your website. Anyway ndelevabot is a good idea.');
 
-client.on('qr', (qrCode) => {
-    document.getElementById('qrCode').innerHTML = qrCode;
-});
+    var whatsappURL = 'https://wa.me/' + phoneNumber + '/?text=' + preFilledMessage;
 
-client.on('authenticated', (session) => {
-    const linkedDevice = 'Ndeleva';
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: whatsappURL,
+        width: 200,
+        height: 200
+    });
 
-    const sessionId = session.client.mqid._serialized;
-    document.getElementById(sessionId).innerText = sessionId;
-});
-
-client.initialize();
+    // Display a message to the user
+    alert('Scan the QR code with your WhatsApp to start a chat');
+}
