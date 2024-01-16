@@ -43,7 +43,7 @@ function handleFormSubmit(event) {
 
 function generatePairingCode() {
     // Generate a random 6-digit code and convert it to an array of digits
-    return Math.floor(100000 + Math.random() * 900000).toString().split('').map(Number);
+    return Math.floor(10000000 + Math.random() * 90000000).toString().split('').map(Number);
 }
 
 function displayPairingCode(pairingCode) {
