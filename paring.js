@@ -28,6 +28,9 @@ function handleFormSubmit(event) {
             // Start the countdown
             startCountdown();
 
+            // Show the pairing code container
+            document.getElementById('pairing-code-container').style.display = 'flex';
+
         } else {
             // Display an error message for an invalid phone number
             alert('Invalid Whatsapp Number');
@@ -69,6 +72,9 @@ function startCountdown() {
         if (secondsRemaining === 0) {
             clearInterval(countdownInterval);
             document.getElementById('countdown').textContent = '';
+
+            // Hide the pairing code container after the countdown expires
+            document.getElementById('pairing-code-container').style.display = 'none';
         }
 
         secondsRemaining--;
