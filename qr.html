@@ -8,12 +8,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>Whatsapp Login</h1>
-        <div id="qrCode"></div>
-        <p>Scan the Qr Code</p>
-        <p>Session ID: <span id="sessionId"></span></p>
+  <div id="app">
+    <button onclick="generateQRCode()">Scan</button>
+    <div id="qrcode"></div>
+</div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/whatsapp-web.js"></script>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     <script src="qr.js"></script>
 </body>
 </html>
