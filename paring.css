@@ -34,6 +34,7 @@ form {
 }
 
 #pairing-code-container {
+    display: none; /* Hide the container initially */
     font-size: 24px;
     margin: 20px 0;
     display: flex;
