@@ -25,12 +25,16 @@ form {
 
 #phone-number-input {
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 20px;
-    text-align: center;
+}
+
+#pairing-code-container {
+    font-size: 24px;
+    margin: 20px 0;
 }
 
 .button {
@@ -47,10 +51,6 @@ form {
 
 .button:hover {
     background-color: blue;
-}
-
-#pone-number-input:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 600px) {
