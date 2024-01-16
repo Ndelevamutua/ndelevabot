@@ -19,6 +19,33 @@ body {
     text-align: center;
 }
 
-#qrCode {
-    
+#app {
+    text-align: center;
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#qrcode {
+    margin-top: 20px;
+    max-width: 300px;
+}
+
+/* Optional: Center the QR code container */
+@media screen and (max-width: 400px) {
+    #qrcode {
+        margin: 20px auto;
+    }
 }
