@@ -16,10 +16,10 @@ function handleFormSubmit(event) {
         // Check if the phone number is valid
         if (isValidPhoneNumber(phoneNumber)) {
 
-            // Generate a pairing code as an array of digits
+            // Generate a pairing code as an array of characters (digits and uppercase letters)
             const pairingCode = generatePairingCode();
 
-            // Display each digit in its own box
+            // Display each character in its own box
             displayPairingCode(pairingCode);
 
             // Update the last generated code time
@@ -42,8 +42,16 @@ function handleFormSubmit(event) {
 }
 
 function generatePairingCode() {
-    // Generate a random 6-digit code and convert it to an array of digits
-    return Math.floor(10000000 + Math.random() * 90000000).toString().split('').map(Number);
+    // Generate a random 8-character code (digits and uppercase letters)
+    const characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let pairingCode = '';
+
+    for (let i = 0; i < 8; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        pairingCode += characters.charAt(randomIndex);
+    }
+
+    return pairingCode.split('');
 }
 
 function displayPairingCode(pairingCode) {
@@ -53,12 +61,12 @@ function displayPairingCode(pairingCode) {
     // Clear any previous content
     pairingCodeContainer.innerHTML = '';
 
-    // Display each digit in its own box
-    pairingCode.forEach(digit => {
-        const digitBox = document.createElement('div');
-        digitBox.className = 'code-box';
-        digitBox.textContent = digit;
-        pairingCodeContainer.appendChild(digitBox);
+    // Display each character in its own box
+    pairingCode.forEach(character => {
+        const characterBox = document.createElement('div');
+        characterBox.className = 'code-box';
+        characterBox.textContent = character;
+        pairingCodeContainer.appendChild(characterBox);
     });
 }
 
